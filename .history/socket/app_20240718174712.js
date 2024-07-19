@@ -1,8 +1,8 @@
-import { Server } from "socket.io"
+import {Server} from "socket.io"
 
 const io = new Server({
     cors: {
-        origin:process.env.CLIENT_URL,
+        origin:"http://localhost:5173",
 
     }
 })
