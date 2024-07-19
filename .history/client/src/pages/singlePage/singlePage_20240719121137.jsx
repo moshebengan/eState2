@@ -170,7 +170,7 @@ function SinglePage() {
               {saved ? "Place Saved" : "Save the Place"}
             </button>
           </div>
-          {error && <p>{error}</p>}
+          {error && <p>error</p>}
         </div>
       </div>
     </div>

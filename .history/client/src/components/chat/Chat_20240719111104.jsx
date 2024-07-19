@@ -109,19 +109,19 @@ function Chat({ chats }) {
           <div className="center">
             {chat.messages.map((message) => (
               <div
-                className={
-                  message.userId === currentUser.id
-                    ? "chatMessage own"
-                    : "chatMessage"
-                }
+                className={message.userId === currentUser.id ? "chatMessage" : "chatMessage own"}
+                // style={{
+                //   alignSelf:
+                //     message.userId === currentUser.id
+                //       ? "flex-end"
+                //       : "flex-start",
+                //   textAlign:
+                //     message.userId === currentUser.id ? "right" : "left",
+                // }}
                 key={message.id}
               >
-                <div className="messageContent">
                 <p>{message.text}</p>
-                </div>
-                <div className="messageTime">
                 <span>{format(message.createdAt)}</span>
-                </div>
               </div>
             ))}
             <div ref={messageEndRef}></div>

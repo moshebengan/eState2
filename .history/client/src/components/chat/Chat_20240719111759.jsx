@@ -116,12 +116,8 @@ function Chat({ chats }) {
                 }
                 key={message.id}
               >
-                <div className="messageContent">
                 <p>{message.text}</p>
-                </div>
-                <div className="messageTime">
                 <span>{format(message.createdAt)}</span>
-                </div>
               </div>
             ))}
             <div ref={messageEndRef}></div>

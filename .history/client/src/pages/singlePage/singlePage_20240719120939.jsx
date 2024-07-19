@@ -10,7 +10,7 @@ import apiRequest from "../../lib/apiRequest";
 function SinglePage() {
   const post = useLoaderData();
   const [saved, setSaved] = useState(post.isSaved);
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
   const { currentUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -36,7 +36,8 @@ function SinglePage() {
       });
       navigate("/profile");
     } catch (err) {
-      setError(err.response.data.message)
+      console.log(err);
+      // setError(err)
     }
   };
 
@@ -170,7 +171,6 @@ function SinglePage() {
               {saved ? "Place Saved" : "Save the Place"}
             </button>
           </div>
-          {error && <p>{error}</p>}
         </div>
       </div>
     </div>
